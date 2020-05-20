@@ -208,6 +208,15 @@ var page2_1 =[
         type: "js",
         depict: "",
         images:["i-component1","i-component2","i-component3"],
+        help:[
+          "h-component-1",
+          "h-component-2",
+          "h-component-3",
+          "h-component-4",
+          "h-component-5",
+          "h-component-6",
+          "h-component-7"
+        ],
         code: `Vue.component('my-component', {
   components: {
       ProductComponent, ReviewComponent
@@ -220,6 +229,7 @@ var page2_1 =[
       required: true,
       default: "none",
       validator: function (value) {
+
       }
     }
   },
@@ -262,6 +272,7 @@ var page2_1 =[
       },
       {
         type: "js",
+        help:["h-custom"],
         depict: "在button-counter组件:",
         code: `this.$emit('incrementBy', 5)`,
       }       

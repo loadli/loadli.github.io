@@ -38,7 +38,71 @@
   left: 2.5em;
   background-image: url(../images/h-action.png);
 }
+.h-component-1{
+  height: 3em;
+  width: 18em;
+  top: 2.6em;
+  left: 9.5em;
+  background-position: 0 0;
+  background-image: url(../images/h-component.png);
+}
+.h-component-2{
+  height: 2em;
+  width: 18em;
+  top: 8.3em;
+  left: 8.5em;
+  background-position: 0 -4em;
+  background-image: url(../images/h-component.png);
+}
+.h-component-3{
+  height: 2em;
+  width: 18em;
+  top: 21.8em;
+  left: 4.5em;
+  background-position: 0 -6.5em;
+  background-image: url(../images/h-component.png);
+}
+.h-component-4{
+  height: 2em;
+  width: 18em;
+  top: 28.3em;
+  left: 12.5em;
+  background-position: 0 -9em;
+  background-image: url(../images/h-component.png);
+}
+.h-component-5{
+  height: 4em;
+  width: 18em;
+  top: 38.8em;
+  left: 12.5em;
+  background-position: 0 -12em;
+  background-image: url(../images/h-component.png);
+}
+.h-component-6{
+  height: 2em;
+  width: 18em;
+  top: 47em;
+  left: 6em;
+  background-position: 0 -16em;
+  background-image: url(../images/h-component.png);
+}
+.h-component-7{
+  height: 2em;
+  width: 18em;
+  top: 56.5em;
+  left: 4.5em;
+  background-position: 0 -19em;
+  background-image: url(../images/h-component.png);
+}
 
+.h-custom{
+  height: 4.6em;
+  width: 19em;
+  top: .6em;
+  left: 13.5em;
+  background-position: 0 0;
+  background-image: url(../images/h-custom.png);
+}
 /* 
 *   标题图片
 */
