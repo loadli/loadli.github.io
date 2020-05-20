@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "Roboto Mono";
+  src: local("Roboto Mono"), url("RobotoMono-Regular.ttf");
+}
+code,pre{
+  display: block;
+  font-family: "Roboto Mono", Monaco, courier, monospace, Consolas, Microsoft YaHei;
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+}
+/* 
+*   布局相关
+*/
+
+body{
+  font-size: 14px;
+  background-color: #f2f2f2;
+}
+
+/* 
+*   纸
+*/
+.paper{
+  width: 1240px;
+  height: auto;
+  margin: 0 auto;
+  padding: 5em;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.half{
+  width: 50%;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+.half:nth-of-type(odd){
+  padding-right: .2em;
+}
+.half:nth-of-type(even){
+  padding-left: .2em;
+}
+
+/* 
+*   标题
+*/
+.head{
+  padding: 2em 0;
+  border-bottom: .3em solid #41b682;
+  border-image: linear-gradient(to right, #41b682 , #85d069) 1 1;
+  -webkit-border-image: -webkit-linear-gradient(to right, #41b682 , #85d069)  1 1;
+  -o-border-image: -moz-linear-gradient(to right, #41b682 , #85d069) 1 1;
+}
+.head > .title{
+  font-weight: bold;
+  font-size: 2.8em;
+  color: #36485e;
+}
+/* 
+*   主要
+*/
+.main{
+  padding: 2em 0;
+}
+
+/* 
+*   模块
+*/
+.module{
+  padding: 2em;
+  margin-bottom: 1em;
+  border-radius: .8em;
+  position: relative;
+  transition: all .2s;
+}
+.module:hover{
+  background-color: #f5fcff;
+}
+.module > .title{
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #36485e;
+}
+.module > .icon{
+  z-index: 2;
+  position: absolute;
+  right: 2.6em;
+  top: 2em;
+  width: 4.5em;
+  height: 4.5em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/titleIcon.png);
+}
+.images-box{
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  z-index: 2;
+}
+.images-box >.images{
+  position: relative;
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.help-box{
+
+}
+.help-box >.help{
+  z-index: 3;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.module > .group{
+  margin: 1em 0;
+  position: relative;
+}
+.group .depict{
+  font-size: 1.2em;
+  color: #9b9696;
+  margin-bottom: .6em;
+}
+
+/* 
+* 代码框
+*/
+.code{
+  position: relative;
+  padding: 1em;
+  border-radius: .5em;
+  color: #3b3b3b;
+  border: .1em solid #eeefeb;
+  overflow-x: auto;
+  white-space: pre;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  transition: all .2s;
+}
+.code:hover{
+  border-color: #cccccc;
+}

@@ -1,0 +1,77 @@
+/* 
+*   代码框样式
+*/
+.s-1{
+  position: absolute;
+  right: 0;
+  padding: 1em;
+  line-height: 1.5em;
+}
+.left-10{
+  margin-left: 10em;
+}
+.left-12{
+  margin-left: 12em;
+}
+
+/* 
+*   辅助图片
+*/
+.h-key{
+  height: 5.1em;
+  width: 10.6em;
+  top: 2.5em;
+  left: 11em;
+  background-image: url(../images/h-key.png);
+}
+.h-bind{
+  height: 5em;
+  width: 11em;
+  top: 3em;
+  left: 2em;
+  background-image: url(../images/h-bind.png);
+}
+.h-action{
+  height: 6.8em;
+  width: 10em;
+  top: 4.6em;
+  left: 2.5em;
+  background-image: url(../images/h-action.png);
+}
+
+/* 
+*   标题图片
+*/
+.i-binding{
+  background-position: 0 .1em;
+}
+.i-actions{
+  background-position: 0 -4.4em;
+}
+.i-component{
+  background-position: 0 -8.8em;
+}
+.i-hook{
+  background-position: 0 -13.2em;
+}
+.i-slot{
+  background-position: 0 -17.8em;
+}
+/* 
+*   装饰图片
+*/
+.i-component1{
+  top: 8em;
+  background-image: url(../images/cpmponentImg.png);
+  background-position: 0 0;
+}
+.i-component2{
+  top:20em;
+  background-image: url(../images/cpmponentImg.png);
+  background-position: 0 -3em;
+}
+.i-component3{
+  top: 46em;
+  background-image: url(../images/cpmponentImg.png);
+  background-position: 0 -6em;
+}
