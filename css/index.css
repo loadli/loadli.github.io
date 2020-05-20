@@ -13,6 +13,7 @@ code,pre{
 */
 
 body{
+  min-width: 610px;
   font-size: 14px;
   background-color: #f2f2f2;
 }
@@ -21,12 +22,13 @@ body{
 *   纸
 */
 .paper{
-  width: 1240px;
+  width: 1200px;
   height: auto;
   margin: 0 auto;
-  padding: 5em;
+  padding: 4em;
   box-sizing: border-box;
   background-color: #fff;
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.15);
 }
 .half{
   width: 50%;
@@ -40,6 +42,15 @@ body{
 .half:nth-of-type(even){
   padding-left: .2em;
 }
+@media (max-width: 960px) {
+  .paper{
+    width: 100%;
+  }
+  .half{
+    width: 100%;
+  }
+
+ }
 
 /* 
 *   标题

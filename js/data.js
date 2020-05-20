@@ -245,7 +245,9 @@ var page2_1 =[
     }
   },
   watch: {
-    firstName: function (value, oldValue) { ... }
+    firstName: function (value, oldValue) {
+      ...
+    }
   },
   methods: { ... },
   template: '<span>{{ message }}</span>',
