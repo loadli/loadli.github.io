@@ -227,9 +227,15 @@ var main = {
     data.forEach(function (item, index) {
       var codeHtml = "";
       item.group.forEach(function (v, i) {
-        v.code = _this.formatCode(v.code);
-        v.code = _this.hightCode(v.code,rule[v.type]);
-        codeHtml += _this.packCode(v);
+
+        if(v.type == "block"){ //非代码框
+          codeHtml += v.html;
+        }else{
+          v.code = _this.formatCode(v.code);
+          v.code = _this.hightCode(v.code,rule[v.type]);
+          codeHtml += _this.packCode(v);
+        }
+        
       });
       moduleHTml += _this.packModule(item,codeHtml);
     });

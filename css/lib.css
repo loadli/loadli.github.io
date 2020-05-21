@@ -15,6 +15,51 @@
 }
 
 /* 
+*   其他框样式
+*/
+.block{
+  padding: 2em;
+  border-radius: .5em;
+}
+.ps{
+  background-color: #eeefeb;
+}
+.ps > div{
+  display: inline-block;
+}
+.ps >.logo{
+  height: 6em;
+  width: 11em;
+  margin-right: 1em;
+  /* top: 3em;
+  left: 2em; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/masteryLogo.png);
+}
+.word{
+  vertical-align: top;
+}
+.word .from{
+  font-size: 1.2em;
+  color: #36485e;
+  line-height: 2.6em;
+}
+.word .link{
+  line-height: 2em;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #36485e;
+  text-decoration: none;
+}
+.word .link:hover{
+  text-decoration: dashed;
+} 
+.mylink{
+  font-size: 1.3em;
+  border-bottom: 0.2em solid #62b58c;
+}
+/* 
 *   辅助图片
 */
 .h-key{

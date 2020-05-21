@@ -94,7 +94,21 @@ var page1_1 =[
               :product="item" :key="item.id">`,
       },
     ],
-  }
+  },
+  {
+    title: "",
+    group: [
+      {
+        type:"block",
+        html:`<div class="block ps">
+          <div class="word">
+            <p class="from">😛0.65秒记住网址：<span class="mylink">haokui.net</span> （好亏）&nbsp;&nbsp; o(╥﹏╥)o</p>
+          </div>
+        </div>
+        `
+      }
+    ],
+  },
 ];
 var page1_2 =[
   {
@@ -277,9 +291,25 @@ var page2_1 =[
         help:["h-custom"],
         depict: "在button-counter组件:",
         code: `this.$emit('incrementBy', 5)`,
-      }       
+      },
     ],
   },
+  {
+    title: "",
+    group: [
+      {
+        type:"block",
+        html:`<div class="block ps">
+          <div class="logo"></div>
+          <div class="word">
+            <p class="from">原文来自VueMastery出品的PDF</p>
+            <a class="link" href="www.VueMastery.com">VueMastery.com</a>
+          </div>
+        </div>
+        `
+      }
+    ],
+  },  
 ];
 var page2_2 =[
   {
