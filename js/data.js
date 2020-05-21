@@ -303,7 +303,7 @@ var page2_1 =[
           <div class="logo"></div>
           <div class="word">
             <p class="from">原文来自VueMastery出品的PDF</p>
-            <a class="link" href="www.VueMastery.com">VueMastery.com</a>
+            <a class="link" href="https://www.VueMastery.com">VueMastery.com</a>
           </div>
         </div>
         `
