@@ -27,12 +27,10 @@
 .ps > div{
   display: inline-block;
 }
-.ps >.logo{
+.ps >.logo-m{
   height: 6em;
   width: 11em;
   margin-right: 1em;
-  /* top: 3em;
-  left: 2em; */
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url(../images/masteryLogo.png);

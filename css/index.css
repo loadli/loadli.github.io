@@ -56,6 +56,7 @@ body{
 *   标题
 */
 .head{
+  position: relative;
   padding: 2em 0;
   border-bottom: .3em solid #41b682;
   border-image: linear-gradient(to right, #41b682 , #85d069) 1 1;
@@ -63,9 +64,32 @@ body{
   -o-border-image: -moz-linear-gradient(to right, #41b682 , #85d069) 1 1;
 }
 .head > .title{
+  display: inline-block;
+  vertical-align: middle;
   font-weight: bold;
-  font-size: 2.8em;
+  font-size: 3em;
   color: #36485e;
+}
+.spacing-1{
+  letter-spacing: .06em;
+}
+.logo-box{
+  display: inline-block;
+}
+.head .logo{
+  cursor: default;
+  display: inline-block;
+  vertical-align: middle;
+  padding: .3em 1em;
+  margin: .1em .9em;
+  font-size: 1.6em;
+  border-radius: 3em;
+  color: #fff;
+  background-color: #41b682;
+  transition: all .5s;
+}
+.head .logo:hover{
+  box-shadow: inset 4.6em 0em #36485e;
 }
 /* 
 *   主要
@@ -130,6 +154,7 @@ body{
   position: relative;
 }
 .group .depict{
+  z-index: 2;
   font-size: 1.2em;
   color: #9b9696;
   margin-bottom: .6em;

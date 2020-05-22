@@ -25,7 +25,7 @@ var page1_1 =[
     group: [
       {
         type: "html",
-        depict: "根据布尔值插入/删除的元素：",
+        depict: "根据布尔值插入/删除元素：",
         code: `<p v-if="inStock">{{ product }}</p>`,
       },
       {
@@ -36,30 +36,30 @@ var page1_1 =[
       },
       {
         type: "html",
-        depict: "切换显示：无CSS属性：",
+        depict: "切换元素的display:none属性：",
         code: `<p v-show="showProductDetails">...</p>`,
       },
       {
         type: "html",
-        depict: "双向数据绑定",
+        depict: "双向数据绑定：",
         code: `<input v-model="firstName">`,
       },
       {
         type: "html",
         style: 1,
-        depict: "在change事件后更新值",
+        depict: "使用change事件同步值：",
         code: `v-model.lazy="..."`,
       },
       {
         type: "html",
         style: 1,
-        depict: "返回数字类型",
+        depict: "输入值转为数值型：",
         code: `v-model.number="..."`,
       },
       {
         type: "html",
         style: 1,
-        depict: "去除空格",
+        depict: "去除首尾空格：",
         code: `v-model.trim="..."`,
       },       
     ],
@@ -79,17 +79,17 @@ var page1_1 =[
       },
       {
         type: "html",
-        depict: "访问数组中的位置",
+        depict: "访问数组索引：",
         code: `<li v-for="(item, index) in items">...`,
       },
       {
         type: "html",
-        depict: "遍历对象",
+        depict: "遍历对象：",
         code: `<li v-for="(value, key) in object">...`,
       },
       {
         type: "html",
-        depict: "组件使用v-for",
+        depict: "组件使用v-for：",
         code: `<cart-product v-for="item in products"
               :product="item" :key="item.id">`,
       },
@@ -102,7 +102,7 @@ var page1_1 =[
         type:"block",
         html:`<div class="block ps">
           <div class="word">
-            <p class="from">😛0.65秒记住网址：<span class="mylink">haokui.net</span> （好亏）&nbsp;&nbsp; o(╥﹏╥)o</p>
+            <p class="from">😛花0.65秒记住网址：<span class="mylink">haokui.net</span>（好亏）╥﹏╥</p>
           </div>
         </div>
         `
@@ -129,17 +129,17 @@ var page1_2 =[
       },
       {
         type: "html",
-        depict: "True或false将添加或删除属性:",
+        depict: "通过true/false添加或删除html属性：",
         code: `<button :disabled="isButtonDisabled">...`,
       },
       {
         type: "html",
-        depict: "如果isActive是真实的，那么'active'类就会出现:",
+        depict: "isActive为true时，添加active类名：",
         code: `<div :class="{ active: isActive }">...`,
       },
       {
         type: "html",
-        depict: "样式颜色设置为activeColor的值：",
+        depict: "字体颜色设置为activeColor的值：",
         code: `<div :style="{ color: activeColor }">`,
       },      
     ],
@@ -167,24 +167,24 @@ var page1_2 =[
       },
       {
         type: "html",
-        depict: "为防止出现默认行为（例如页面重新加载）：",
+        depict: "阻止事件默认行为（例如页面重新加载）：",
         code: `<form @submit.prevent="addProduct">...`,
       },
       {
         type: "html",
-        depict: "仅触发一次：",
+        depict: "只触发一次：",
         code: `<img @mouseover.once="showImage">...`,
       },
       {
         type: "html",
         style: 1,
-        depict: "停止所有事件传播",
+        depict: "阻止事件冒泡",
         code: `.stop`,
       }, 
       {
         type: "html",
         style: 1,
-        depict: "仅在event.target是元素本身时触发",
+        depict: "只有元素本身才能触发事件",
         code: `.self`,
       }, 
       {
@@ -194,7 +194,7 @@ var page1_2 =[
       },
       {
         type: "html",
-        depict: "按下control-c时调用onCopy：",
+        depict: "按下Ctrl+C时调用onCopy：",
         code: `<input @keyup.ctrl.c="onCopy">`,
       },
       {
@@ -276,12 +276,12 @@ var page2_1 =[
     group: [
       {
         type: "html",
-        depict: "使用道具(如上)将数据传递给子组件，自定义事件将数据传递给父元素。<br/><br/>在组件上设置监听器，在其父组件内:",
+        depict: "props(如上)是将数据传递给子组件，自定义事件是将数据传给父组件。<br/><br/>在组件的父级上写监听方法",
         code: `<button-counter v-on:incrementBy="incWithVal">`,
       },
       {
         type: "js",
-        depict: "在父组件:",
+        depict: "父组件写法:",
         code: `methods: {
   incWithVal: function (toAdd) { ... }
 }`,
@@ -289,7 +289,7 @@ var page2_1 =[
       {
         type: "js",
         help:["h-custom"],
-        depict: "在button-counter组件:",
+        depict: "在子组件button-counter内部写：",
         code: `this.$emit('incrementBy', 5)`,
       },
     ],
@@ -300,7 +300,7 @@ var page2_1 =[
       {
         type:"block",
         html:`<div class="block ps">
-          <div class="logo"></div>
+          <div class="logo-m"></div>
           <div class="word">
             <p class="from">原文来自VueMastery出品的PDF</p>
             <a class="link" href="https://www.VueMastery.com">VueMastery.com</a>
@@ -342,7 +342,7 @@ mounted        destroyed`,
      },
      {
         type: "html",
-        depict: "带数据的槽组件的使用",
+        depict: "组件和插槽一起用",
         code: `<my-component>
   <p>This will go in the slot</p>
 </my-component>`,
@@ -355,7 +355,7 @@ mounted        destroyed`,
     group: [
       {
         type: "html",
-        depict: "组件模板",
+        depict: "组件写法",
         code: `<div class="container">
   <header>
     <slot name="header"></slot>
@@ -370,7 +370,7 @@ mounted        destroyed`,
      },
      {
         type: "html",
-        depict: "带数据的槽组件的使用:",
+        depict: "带插槽的组件用法:",
         code: `<app-layout>
   <h1 slot="header">Page title</h1>
   <p>the main content.</p>
@@ -385,15 +385,15 @@ mounted        destroyed`,
     group: [
       {
         type: "library",
-        depict: "组件模板",
+        depict: "",
         code: `Vue CLI
-命令行界面，用于快速的Vue开发。        
+命令行工具，用于快速的Vue开发。        
 Vue Router
-单页应用程序的导航。
+单页应用的路由管理器。
 Vue DevTools
 用于调试Vue应用程序的浏览器扩展。
 Nuxt.js
-用于服务器端渲染，代码拆分，热重定向的库加载，静态生成等。`,
+用于服务器端渲染、代码拆分、热加载、静态生成等的库。`,
      }     
     ],
   }
