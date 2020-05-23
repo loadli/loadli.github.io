@@ -29,6 +29,7 @@ body{
   background-color: #fff;
   box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.15);
 }
+/* 分栏 */
 .half{
   width: 50%;
   display: inline-block;
@@ -130,15 +131,18 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
-.help-box{
-
-}
+/* 
+* 描述图片
+*/
 .help-box >.help{
   z-index: 3;
   position: absolute;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* 代码框 */
+
 .module > .group{
   margin: 1em 0;
   position: relative;
@@ -151,7 +155,7 @@ body{
 }
 
 /* 
-* 代码框
+* 代码
 */
 .code{
   position: relative;

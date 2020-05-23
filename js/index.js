@@ -1,80 +1,79 @@
 var rule = {
   html: [
-    { regex: /(?<=&lt;\w*-?\w*)\s[^v@:\.]\w*/g,  css: "c-keyword", }, // id,class
-    { regex: /(?<="{\s)\w+/g,                    css: "c-keyword", }, // { * :
-    { regex: /\w+\s(?=}")/g,                     css: "c-keyword", }, // : }
-    { regex: /(?<=")\w+(?=\()/g,                 css: "c-keyword", }, // "a(a)
-    { regex: /(?<={{.*):/g,                      css: "c-sign",    }, // {{ :
-    { regex: /(?<=[:@.]\w*=")\w+/g,              css: "c-var",     }, // :a="a"
-    { regex: /(?<=v-\w*-?\w*=")\w+/g,            css: "c-var",     }, // v-if="a"
-    { regex: /(?<=\=")\w*/g,                     css: "c-id",      }, // id="a"
-    { regex: /(?<=&lt;\/?)\w*-?\w*/g,            css: "c-keyword", }, // div
-    { regex: /(?<=\s)v-\w*-?\w*/g,               css: "c-attr-v",  }, // v-if,v-else,v-show,v-model
-    { regex: /v-\w*.?\w*/g,                      css: "c-attr-v",  }, // v-a.a
-    { regex: /(?<=\()\w+/g,                      css: "c-var",     }, // "(*"
-    { regex: /\w+(?=\))/g,                       css: "c-var",     }, // "*) "
-    { regex: /,\s/g,                             css: "c-sign",    }, // "*) "
-    { regex: /(?<=\sin\s)\w*/g,                  css: "c-var",     }, // in *
-    { regex: /\sin\s/g,                          css: "c-sign",    }, // in
-    { regex: /\w*(?=\(\))/g,                     css: "c-attr",    }, // {{ .a() }}
-    { regex: /(?<={{\s)\w*/g,                    css: "c-var",     }, // {{ a }}
-    { regex: /'\w*'/g,                           css: "c-id",      }, // {{ 'a' }}
-    { regex: /[\+\?\']/g,                        css: "c-sign",    }, // {{ +?.:'' }}
-    { regex: /:\w*/g,                            css: "c-attr-v",  }, // :
-    { regex: /@\w*/g,                            css: "c-attr-v",  }, // @
-    { regex: /\.\w+/g,                           css: "c-attr-v",  }, // .
-    { regex: /\.\.\./g,                          css: "c-default", }, // ...
-    { regex: /\./g,                              css: "c-sign",    }, // {{ . }}
-    { regex: /{{\s?/g,                           css: "c-sign",    }, // {{
-    { regex: /\s?}}/g,                           css: "c-sign",    }, // }}
-    { regex: /{\s?/g,                            css: "c-tag",     }, // {
-    { regex: /\s?}/g,                            css: "c-tag",     }, // }
-    { regex: /\(\)/g,                            css: "c-default", }, // ()
-    { regex: /\(/g,                              css: "c-keyword", }, // (
-    { regex: /\)/g,                              css: "c-keyword", }, // )
-    { regex: /\s?}/g,                            css: "c-tag",     }, // {
-    { regex: /(?<=\w*?)\=?\"/g,                  css: "c-sign",    }, // =""
-    { regex: /&lt;/g,                            css: "c-tag",     }, // <
-    { regex: /&gt;/g,                            css: "c-tag",     }, // >
-    { regex: /\//g,                              css: "c-tag",     }, // /
+    { regex: /(?<=&lt;\w*-?\w*)\s[^v@:\.]\w*/g,  css: "c-keyword"        }, // id,class
+    { regex: /(?<="{\s)\w+/g,                    css: "c-attr-key_vlaue" }, // { * :
+    { regex: /\w+\s(?=}")/g,                     css: "c-attr-key_vlaue" }, // : }
+    { regex: /(?<=")\w+(?=\()/g,                 css: "c-keyword"        }, // "a(a)
+    { regex: /(?<={{.*):/g,                      css: "c-colon"          }, // {{ :
+    { regex: /(?<=[:@.]\w*=")\w+/g,              css: "c-attr-value"     }, // :a="a"
+    { regex: /(?<=v-\w*-?\w*=")\w+/g,            css: "c-attr-value"     }, // v-if="a"
+    { regex: /(?<=\=")\w*/g,                     css: "c-id"             }, // id="a"
+    { regex: /(?<=&lt;\/?)\w*-?\w*/g,            css: "c-keyword"        }, // div
+    { regex: /(?<=\s)v-\w*-?\w*/g,               css: "c-attr-vue c-strong"  }, // v-if,v-else,v-show,v-model
+    { regex: /v-\w*.?\w*/g,                      css: "c-attr-vue c-strong"  }, // v-a.a
+    { regex: /(?<=\()\w+/g,                      css: "c-params"         }, // "(*"
+    { regex: /\w+(?=\))/g,                       css: "c-params"         }, // "*) "
+    { regex: /,\s/g,                             css: "c-comma"          }, // ,
+    { regex: /(?<=\sin\s)\w*/g,                  css: "c-var"            }, // in *
+    { regex: /\sin\s/g,                          css: "c-vue-in"         }, // in
+    { regex: /\w*(?=\(\))/g,                     css: "c-function-kind"  }, // {{ .a() }}
+    { regex: /(?<={{\s)\w*/g,                    css: "c-function"       }, // {{ a }}
+    { regex: /'\w*'/g,                           css: "c-string"         }, // {{ 'a' }}
+    { regex: /[\+\?\']/g,                        css: "c-quote"          }, // {{ +?.:'' }}
+    { regex: /:\w*/g,                            css: "c-attr-vue c-strong"  }, // :
+    { regex: /@\w*/g,                            css: "c-attr-vue c-strong"  }, // @
+    { regex: /\.\w+/g,                           css: "c-attr-vue c-strong"  }, // .
+    { regex: /\.\.\./g,                          css: "c-default"        }, // ...
+    { regex: /\./g,                              css: "c-dot"            }, // {{ . }}
+    { regex: /{{\s?/g,                           css: "c-braces"         }, // {{
+    { regex: /\s?}}/g,                           css: "c-braces"         }, // }}
+    { regex: /{\s?/g,                            css: "c-attr-braces"    }, // {
+    { regex: /\s?}/g,                            css: "c-attr-braces"    }, // }
+    { regex: /\(\)/g,                            css: "c-default"        }, // ()
+    { regex: /\(/g,                              css: "c-attr-parentheses"  }, // (
+    { regex: /\)/g,                              css: "c-attr-parentheses"  }, // )
+    { regex: /(?<=\w*?)\=?\"/g,                  css: "c-quote"          }, // =""
+    { regex: /&lt;/g,                            css: "c-tag"            }, // <
+    { regex: /&gt;/g,                            css: "c-tag"            }, // >
+    { regex: /\//g,                              css: "c-tag"            }, // /
     
   ],
   js:[
     { regex: /(?<=components:\s{)\s*\w+,?\s?\w+/g,
-                                                 css: "c-var",     }, // {a,b}
-    { regex: /data(?=:\s?function)/g,            css: "c-default", }, // data
-    { regex: /\w+(?=:\s?function)/g,             css: "c-attr",    }, // function
-    { regex: /(?<=\.)component/g,                css: "c-component",}, // component
-    { regex: /Vue/g,                             css: "c-var",     }, // component
+                                                 css: "c-components"     }, // {a,b}
+    { regex: /data(?=:\s?function)/g,            css: "c-default"        }, // data
+    { regex: /\w+(?=:\s?function)/g,             css: "c-function_name"  }, // function
+    { regex: /(?<=\.)component/g,                css: "c-component c-strong" }, // component
+    { regex: /Vue/g,                             css: "c-vue"            }, // vue
     { regex: /Number,|String,|Object,|Array,|Function,|Boolean,/g,
-                                                 css: "c-type",    }, // type
-    { regex: /true|false/g,                      css: "c-attr",    }, // true|false
-    { regex: /\.\w+/g,                           css: "c-var",     }, // .a
-    { regex: /this/g,                            css: "c-this",    }, // this
-    { regex: /function/g,                        css: "c-var",     }, // function
-    { regex: /computed|watch/g,                  css: "c-var",     }, // computed|watch
-    { regex: /(?<=\()\w+,?\s?\w+/g,              css: "c-var",     }, // (a,b)
-    { regex: /(?<={.+)\w+(?=.+function)/g,       css: "c-attr",    }, // /
-    { regex: /(?<=").+(?=")/g,                   css: "c-id",      }, // ""
-    { regex: /(?<=').+(?=')/g,                   css: "c-id",      }, // ''
-    { regex: /return/g,                          css: "c-keyword", }, // return
-    { regex: /{\s?/g,                            css: "c-sign",    }, // {
-    { regex: /\s?}/g,                            css: "c-sign",    }, // }
-    { regex: /\(/g,                              css: "c-sign",    }, // (
-    { regex: /\)/g,                              css: "c-sign",    }, // )
-    { regex: /'/g,                              css: "c-sign",     }, // )
-    { regex: /,/g,                              css: "c-sign",     }, // )
+                                                 css: "c-type c-strong"  }, // type
+    { regex: /true|false/g,                      css: "c-attr"           }, // true|false
+    { regex: /\.\w+/g,                           css: "c-var"            }, // .a
+    { regex: /this/g,                            css: "c-this"           }, // this
+    { regex: /function/g,                        css: "c-function"       }, // function
+    { regex: /computed|watch/g,                  css: "c-vue-function"   }, // computed|watch
+    { regex: /(?<=\()\w+,?\s?\w+/g,              css: "c-params"         }, // (a,b)
+    { regex: /(?<={.+)\w+(?=.+function)/g,       css: "c-attr"           }, // /
+    { regex: /(?<=").+(?=")/g,                   css: "c-string"         }, // ""
+    { regex: /(?<=').+(?=')/g,                   css: "c-string"         }, // ''
+    { regex: /return/g,                          css: "c-keyword"        }, // return
+    { regex: /{\s?/g,                            css: "c-braces"         }, // {
+    { regex: /\s?}/g,                            css: "c-braces"         }, // }
+    { regex: /\(/g,                              css: "c-parentheses"    }, // (
+    { regex: /\)/g,                              css: "c-parentheses"    }, // )
+    { regex: /'/g,                              css: "c-quote"           }, // '
+    { regex: /,/g,                              css: "c-comma"           }, // ,
   ],
   modifier:[
-    { regex: /\.\w+/g,                           css: "c-attr-v",  }, // .*
+    { regex: /\.\w+/g,                           css: "c-attr-vue c-strong"  }, // .*
   ],
   hook:[
-    { regex: /\w+/g,                             css: "c-attr-v",  }, // *
+    { regex: /\w+/g,                             css: "c-attr-vue c-strong"  }, // *
   ],
   library:[
-    { regex: /Vue\s\w+/g,                        css: "c-library", }, // Vue *
-    { regex: /Nuxt\.js/g,                        css: "c-library", }, // Vue *
-    { regex: /.+。/g,                            css: "c-chinese", }, // Vue *
+    { regex: /Vue\s\w+/g,                        css: "c-library c-strong"   }, // Vue *
+    { regex: /Nuxt\.js/g,                        css: "c-library c-strong"   }, // Nuxt *
+    { regex: /.+。/g,                            css: "c-chinese"        }, // 中文
   ],
 }
 

@@ -1,34 +1,51 @@
-/* 
-*   代码
-*/
-.c-tag{
+/* braces {} */
+/* parentheses () */
+/* dot . */
+/* quote '"? */
+/* comma , */
+/* colon : */
+.c-tag,
+.c-attr-braces{
   color: #9cb6dd;
 }
-.c-sign{
+.c-vue-in,
+.c-braces,
+.c-parentheses,
+.c-dot,
+.c-quote,
+.c-comma,
+.c-colon{
   color: #787878;
 }
-.c-keyword{
+.c-keyword,
+.c-attr-key_vlaue,
+.c-attr-parentheses,
+.c-library{
   color: #4a84c8;
 }
-.c-id{
+.c-id,
+.c-string{
   color: #5a8d3a;
 }
-.c-var{
+.c-var,
+.c-vue,
+.c-params,
+.c-attr-value,
+.c-components,
+.c-vue-function,
+.c-function{
   color: #714499;
 }
 .c-default{
   color: #3b3b3b;
 }
-.c-attr{
+.c-attr,
+.c-function-kind,
+.c-function_name{
   color: #a43731;
 }
-.c-attr-v{
-  font-weight: bold;
+.c-attr-vue{
   color: #62b588;
-}
-.c-library{
-  font-weight: bold;
-  color: #4a84c8;
 }
 .c-chinese{
   font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
@@ -36,93 +53,14 @@
   line-height: 2em;
 }
 .c-type{
-  font-weight: bold;
   color: #714499;
 }
 .c-this{
   color: #a06733;
 }
 .c-component{
-  font-weight: bold;
   color: #a43731;
 }
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-}
-.hljs,
-.hljs-subst {
-  color: #ebdbb2;
-}
-.hljs-deletion,
-.hljs-formula,
-.hljs-keyword,
-.hljs-link,
-.hljs-selector-tag {
-  color: #fb4934;
-}
-.hljs-built_in,
-.hljs-emphasis,
-.hljs-name,
-.hljs-quote,
-.hljs-strong,
-.hljs-title,
-.hljs-variable {
-  color: #4a84c8;
-}
-.hljs-attr,
-.hljs-params,
-.hljs-template-tag,
-.hljs-type {
-  color: #4a84c8;
-}
-.hljs-builtin-name,
-.hljs-doctag,
-.hljs-literal,
-.hljs-number {
-  color: #8f3f71;
-}
-.hljs-code,
-.hljs-meta,
-.hljs-regexp,
-.hljs-selector-id,
-.hljs-template-variable {
-  color: #fe8019;
-}
-.hljs-addition,
-.hljs-meta-string,
-.hljs-section,
-.hljs-selector-attr,
-.hljs-selector-class,
-.hljs-string,
-.hljs-symbol {
-  color: #5a8d3a;
-}
-.hljs-attribute,
-.hljs-bullet,
-.hljs-class,
-.hljs-function,
-.hljs-function .hljs-keyword,
-.hljs-meta-keyword,
-.hljs-selector-pseudo,
-.hljs-tag {
-  color: #8ec07c;
-}
-.hljs-comment {
-  color: #928374;
-}
-.hljs-link_label,
-.hljs-literal,
-.hljs-number {
-  color: #d3869b;
-}
-.hljs-comment,
-.hljs-emphasis {
-  font-style: italic;
-}
-.hljs-section,
-.hljs-strong,
-.hljs-tag {
-  font-weight: 700;
+.c-strong{
+  font-weight: bold;
 }
