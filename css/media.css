@@ -1,0 +1,36 @@
+/* 
+*   布局相关
+*/
+@media (max-width: 768px) {
+  .head .logo{
+    margin-left: 0;
+  }
+}
+@media (max-width: 992px) {
+  .paper{
+    width: 100%;
+    padding: 4em 6em;
+  }
+  .half{
+    width: 100%;
+  }
+  .download::after{
+    border-bottom-color: #fff;
+  }
+}
+@media (min-width:993px) and (max-width: 1200px) {
+  .paper{
+    width: 900px;
+  }
+  .half{
+    width: 100%;
+  }
+  .download::after{
+    border-bottom-color: #f2f2f2;
+  }
+}
+@media (min-width:1201px) and (max-width: 1300px) {
+  .download::after{
+    border-bottom-color: #fff;
+  }
+}
