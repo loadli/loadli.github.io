@@ -53,10 +53,6 @@ body{
 .head{
   position: relative;
   padding: 2em 0;
-  border-bottom: .3em solid #41b682;
-  border-image: linear-gradient(to right, #41b682 , #85d069) 1 1;
-  -webkit-border-image: -webkit-linear-gradient(to right, #41b682 , #85d069)  1 1;
-  -o-border-image: -moz-linear-gradient(to right, #41b682 , #85d069) 1 1;
 }
 .head > .title{
   display: inline-block;
@@ -64,6 +60,16 @@ body{
   font-weight: bold;
   font-size: 3em;
   color: #36485e;
+}
+.title-hr{
+  height: .3em;
+  border: none;
+  background-color: #41b682;
+  background-image: -moz-linear-gradient(to right, #41b682 0%, #85d069 100%);
+  background-image: -webkit-linear-gradient(left, #41b682 0%,#85d069 100%);
+  background-image: -o-linear-gradient(left, #41b682 0%,#85d069 100%);
+  background-image: -ms-linear-gradient(left, #41b682 0%,#85d069 100%);
+  background-image: linear-gradient(to right, #41b682 0%,#85d069 100%);
 }
 .spacing-1{
   letter-spacing: .06em;
