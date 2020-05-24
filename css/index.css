@@ -39,6 +39,7 @@ body{
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
+  margin-right: -3px;
 }
 .half:nth-of-type(odd){
   padding-right: .2em;
