@@ -2,8 +2,11 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge，chrome=1" />
     <title>Vue必备速查表</title>
     <link
       href="https://cdn.bootcdn.net/ajax/libs/minireset.css/0.0.2/minireset.min.css"
@@ -13,7 +16,11 @@
     <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/code.css" />
     <link rel="stylesheet" href="css/lib.css" />
-    <script type="text/javascript" src="http://tajs.qq.com/stats?sId=66560118" charset="UTF-8"></script>
+    <script
+      type="text/javascript"
+      src="http://tajs.qq.com/stats?sId=66560118"
+      charset="UTF-8"
+    ></script>
   </head>
   <body>
     <div class="paper">
@@ -23,9 +30,9 @@
           <h1 class="logo spacing-1">haokui.net</h1>
         </div>
       </div>
-      <hr class="title-hr">
+      <hr class="title-hr" />
       <div class="main" id="content">
-    <!--
+        <!--
         <div class="half">
           <div class="module">
             <h2 class="title">表达式</h2>
@@ -46,10 +53,447 @@
           </div>
       </div>
     -->
+        <div class="half">
+          <div class="module">
+            <h2 class="title">表达式</h2>
+
+            <div class="group">
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">div</span><span class="c-keyword"> id</span><span class="c-quote">="</span><span class="c-id">app</span><span class="c-quote">"</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>I have a <span class="c-braces">{{ </span><span class="c-function">product</span><span class="c-braces"> }}</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span><span class="c-braces">{{ </span><span class="c-function">product</span> <span class="c-quote">+</span> <span class="c-string">'s'</span><span class="c-braces"> }}</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span><span class="c-braces">{{ </span><span class="c-function">isWorking</span> <span class="c-quote">?</span> <span class="c-string">'YES'</span> <span class="c-colon">:</span> <span class="c-string">'NO'</span><span class="c-braces"> }}</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span><span class="c-braces">{{ </span><span class="c-function">product</span><span class="c-dot">.</span><span class="c-function-kind">getSalePrice</span><span class="c-default">()</span><span class="c-braces"> }}</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">div</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+          </div>
+          <div class="module">
+            <h2 class="title">指令</h2>
+
+            <div class="group">
+              <h3 class="depict">根据布尔值插入/删除元素：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">p</span> <span class="c-attr-vue c-strong">v-if</span><span class="c-quote">="</span><span class="c-attr-value">inStock</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-braces">{{ </span><span class="c-function">product</span><span class="c-braces"> }}</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+            <div class="group">
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">p</span> <span class="c-attr-vue c-strong">v-else-if</span><span class="c-quote">="</span><span class="c-attr-value">onSale</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;</span><span class="c-keyword">p</span> <span class="c-attr-vue c-strong">v-else</span><span class="c-tag">&gt;</span><span class="c-default">...</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">切换元素的display:none属性：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">p</span> <span class="c-attr-vue c-strong">v-show</span><span class="c-quote">="</span><span class="c-attr-value">showProductDetails</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">双向数据绑定：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">input</span> <span class="c-attr-vue c-strong">v-model</span><span class="c-quote">="</span><span class="c-attr-value">firstName</span><span class="c-quote">"</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict s-1">使用change事件同步值：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-attr-vue c-strong">v-model.lazy</span><span class="c-quote">="</span><span class="c-default">...</span><span class="c-quote">"</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict s-1">输入值转为数值型：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-attr-vue c-strong">v-model.number</span><span class="c-quote">="</span><span class="c-default">...</span><span class="c-quote">"</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict s-1">去除首尾空格：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-attr-vue c-strong">v-model.trim</span><span class="c-quote">="</span><span class="c-default">...</span><span class="c-quote">"</span></code></pre>
+            </div>
+          </div>
+          <div class="module">
+            <h2 class="title">列表渲染</h2>
+
+            <div class="group">
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">li</span> <span class="c-attr-vue c-strong">v-for</span><span class="c-quote">="</span><span class="c-attr-value">item</span><span class="c-vue-in"> in </span><span class="c-var">items</span><span class="c-quote">"</span> <span class="c-attr-vue c-strong">:key</span><span class="c-quote">="</span><span class="c-attr-value">item</span><span class="c-attr-vue c-strong">.id</span><span class="c-quote">"</span><span class="c-tag">&gt;</span>
+    <span class="c-braces">{{ </span><span class="c-function">item</span><span class="c-braces"> }}</span>
+<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">li</span><span class="c-tag">&gt;</span>
+</code></pre>
+              <div class="help-box"><div class="help h-key"></div></div>
+            </div>
+            <div class="group">
+              <h3 class="depict">访问数组索引：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">li</span> <span class="c-attr-vue c-strong">v-for</span><span class="c-quote">="</span><span class="c-attr-parentheses">(</span><span class="c-params">item</span><span class="c-comma">, </span><span class="c-params">index</span><span class="c-attr-parentheses">)</span><span class="c-vue-in"> in </span><span class="c-var">items</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">遍历对象：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">li</span> <span class="c-attr-vue c-strong">v-for</span><span class="c-quote">="</span><span class="c-attr-parentheses">(</span><span class="c-params">value</span><span class="c-comma">, </span><span class="c-params">key</span><span class="c-attr-parentheses">)</span><span class="c-vue-in"> in </span><span class="c-var">object</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">组件使用v-for：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">cart-product</span> <span class="c-attr-vue c-strong">v-for</span><span class="c-quote">="</span><span class="c-attr-value">item</span><span class="c-vue-in"> in </span><span class="c-var">products</span><span class="c-quote">"</span>
+              <span class="c-attr-vue c-strong">:product</span><span class="c-quote">="</span><span class="c-attr-value">item</span><span class="c-quote">"</span> <span class="c-attr-vue c-strong">:key</span><span class="c-quote">="</span><span class="c-attr-value">item</span><span class="c-attr-vue c-strong">.id</span><span class="c-quote">"</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+          </div>
+          <div class="module">
+            <h2 class="title"></h2>
+
+            <div class="block ps">
+              <div class="word">
+                <p class="from">
+                  😛花0.65秒记住网址：<span class="mylink">haokui.net</span
+                  >（好亏）╥﹏╥
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="half">
+          <div class="module">
+            <h2 class="title">绑定</h2>
+            <div class="icon i-binding"></div>
+            <div class="group">
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">a</span> <span class="c-attr-vue c-strong">v-bind</span><span class="c-attr-vue c-strong">:href</span><span class="c-quote">="</span><span class="c-attr-value">url</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">a</span><span class="c-tag">&gt;</span></code></pre>
+              <div class="help-box"><div class="help h-bind"></div></div>
+            </div>
+            <div class="group">
+              <pre
+                class="code left-12"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">a</span> <span class="c-attr-vue c-strong">:href</span><span class="c-quote">="</span><span class="c-attr-value">url</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">a</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">通过true/false添加或删除html属性：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">button</span> <span class="c-attr-vue c-strong">:disabled</span><span class="c-quote">="</span><span class="c-attr-value">isButtonDisabled</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">isActive为true时，添加active类名：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">div</span> <span class="c-attr-vue c-strong">:class</span><span class="c-quote">="</span><span class="c-attr-braces">{ </span><span class="c-attr-key_vlaue">active</span><span class="c-attr-vue c-strong">:</span> <span class="c-attr-key_vlaue">isActive </span><span class="c-attr-braces">}</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">字体颜色设置为activeColor的值：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">div</span> <span class="c-attr-vue c-strong">:style</span><span class="c-quote">="</span><span class="c-attr-braces">{ </span><span class="c-attr-key_vlaue">color</span><span class="c-attr-vue c-strong">:</span> <span class="c-attr-key_vlaue">activeColor </span><span class="c-attr-braces">}</span><span class="c-quote">"</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+          </div>
+          <div class="module">
+            <h2 class="title">动作 / 事件</h2>
+            <div class="icon i-actions"></div>
+            <div class="group">
+              <h3 class="depict">在组件上调用addToCart方法：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">button</span> <span class="c-attr-vue c-strong">v-on</span><span class="c-attr-vue c-strong">:click</span><span class="c-quote">="</span><span class="c-attr-value">addToCart</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span></code></pre>
+              <div class="help-box"><div class="help h-action"></div></div>
+            </div>
+            <div class="group">
+              <pre
+                class="code left-10"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">button</span> <span class="c-attr-vue c-strong">@click</span><span class="c-quote">="</span><span class="c-attr-value">addToCart</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">可以传递参数：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">button</span> <span class="c-attr-vue c-strong">@click</span><span class="c-quote">="</span><span class="c-keyword">addToCart</span><span class="c-attr-parentheses">(</span><span class="c-params">product</span><span class="c-attr-parentheses">)</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">阻止事件默认行为（例如页面重新加载）：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">form</span> <span class="c-attr-vue c-strong">@submit</span><span class="c-attr-vue c-strong">.prevent</span><span class="c-quote">="</span><span class="c-attr-value">addProduct</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">只触发一次：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">img</span> <span class="c-attr-vue c-strong">@mouseover</span><span class="c-attr-vue c-strong">.once</span><span class="c-quote">="</span><span class="c-attr-value">showImage</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-default">...</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict s-1">阻止事件冒泡</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-attr-vue c-strong">.stop</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict s-1">只有元素本身才能触发事件</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-attr-vue c-strong">.self</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">键盘输入示例：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">input</span> <span class="c-attr-vue c-strong">@keyup</span><span class="c-attr-vue c-strong">.enter</span><span class="c-quote">="</span><span class="c-attr-value">submit</span><span class="c-quote">"</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">按下Ctrl+C时调用onCopy：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">input</span> <span class="c-attr-vue c-strong">@keyup</span><span class="c-attr-vue c-strong">.ctrl</span><span class="c-attr-vue c-strong">.c</span><span class="c-quote">="</span><span class="c-attr-value">onCopy</span><span class="c-quote">"</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">键位修饰符：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-attr-vue c-strong">.tab</span>       <span class="c-attr-vue c-strong">.up</span>       <span class="c-attr-vue c-strong">.ctrl</span>
+<span class="c-attr-vue c-strong">.delete</span>    <span class="c-attr-vue c-strong">.down</span>     <span class="c-attr-vue c-strong">.alt</span>
+<span class="c-attr-vue c-strong">.esc</span>       <span class="c-attr-vue c-strong">.left</span>     <span class="c-attr-vue c-strong">.shift</span>
+<span class="c-attr-vue c-strong">.space</span>     <span class="c-attr-vue c-strong">.right</span>    <span class="c-attr-vue c-strong">.meta</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">鼠标修饰符：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-attr-vue c-strong">.left</span>    <span class="c-attr-vue c-strong">.right</span>     <span class="c-attr-vue c-strong">.middle</span></code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="half">
+          <div class="module">
+            <h2 class="title">组件解析</h2>
+            <div class="icon i-component"></div>
+            <div class="group">
+              <div class="images-box">
+                <div class="images i-component1"></div>
+                <div class="images i-component2"></div>
+                <div class="images i-component3"></div>
+              </div>
+              <pre
+                class="code"
+              ><code><span class="c-vue">Vue</span>.<span class="c-component c-strong">component</span><span class="c-parentheses">(</span><span class="c-quote">'</span><span class="c-string">my-component</span><span class="c-quote">'</span><span class="c-comma">,</span> <span class="c-braces">{
+</span>  components: <span class="c-braces">{</span><span class="c-components">
+      ProductComponent, ReviewComponent</span>
+ <span class="c-braces"> }</span><span class="c-comma">,</span>
+  props: <span class="c-braces">{
+</span>    message: <span class="c-type c-strong">String,</span>
+    product: <span class="c-type c-strong">Object,</span>
+    email: <span class="c-braces">{
+</span>      type: <span class="c-type c-strong">String,</span>
+      required: <span class="c-attr">true</span><span class="c-comma">,</span>
+      default: "<span class="c-string">none</span>"<span class="c-comma">,</span>
+      <span class="c-function_name">validator</span>: <span class="c-function">function</span> <span class="c-parentheses">(</span><span class="c-params">value</span><span class="c-parentheses">)</span> <span class="c-braces">{
+</span>
+     <span class="c-braces"> }</span>
+   <span class="c-braces"> }</span>
+ <span class="c-braces"> }</span><span class="c-comma">,</span>
+  <span class="c-default">data</span>: <span class="c-function">function</span><span class="c-parentheses">(</span><span class="c-parentheses">)</span> <span class="c-braces">{
+</span>    <span class="c-keyword">return</span> <span class="c-braces">{
+</span>      firstName: <span class="c-quote">'</span><span class="c-vue">Vue</span><span class="c-quote">'</span><span class="c-comma">,</span>
+      lastName: <span class="c-quote">'</span><span class="c-string">Mastery</span><span class="c-quote">'</span>
+   <span class="c-braces"> }</span>
+ <span class="c-braces"> }</span><span class="c-comma">,</span>
+  <span class="c-vue-function">computed</span>: <span class="c-braces">{
+</span>    <span class="c-function_name">fullName</span>: <span class="c-function">function</span> <span class="c-parentheses">(</span><span class="c-parentheses">)</span> <span class="c-braces">{
+</span>      <span class="c-keyword">return</span> <span class="c-this">this</span><span class="c-var">.firstName</span> + <span class="c-quote">'</span><span class="c-quote">'</span> + <span class="c-this">this</span><span class="c-var">.lastName</span>
+   <span class="c-braces"> }</span>
+ <span class="c-braces"> }</span><span class="c-comma">,</span>
+  <span class="c-vue-function">watch</span>: <span class="c-braces">{
+</span>    <span class="c-function_name">firstName</span>: <span class="c-function">function</span> <span class="c-parentheses">(</span><span class="c-params">value, oldValue</span><span class="c-parentheses">)</span> <span class="c-braces">{
+</span>      ...
+   <span class="c-braces"> }</span>
+ <span class="c-braces"> }</span><span class="c-comma">,</span>
+  methods: <span class="c-braces">{ </span>...<span class="c-braces"> }</span><span class="c-comma">,</span>
+  template: <span class="c-quote">'</span><span class="c-string">&lt;span&gt;{{ message }}&lt;/span&gt;</span><span class="c-quote">'</span><span class="c-comma">,</span><span class="c-braces">
+}</span><span class="c-parentheses">)</span>
+
+</code></pre>
+              <div class="help-box">
+                <div class="help h-component-1"></div>
+                <div class="help h-component-2"></div>
+                <div class="help h-component-3"></div>
+                <div class="help h-component-4"></div>
+                <div class="help h-component-5"></div>
+                <div class="help h-component-6"></div>
+                <div class="help h-component-7"></div>
+              </div>
+            </div>
+          </div>
+          <div class="module">
+            <h2 class="title">自定义事件</h2>
+
+            <div class="group">
+              <h3 class="depict">
+                props(如上)是将数据传递给子组件，自定义事件是将数据传给父组件。<br /><br />在组件的父级上写监听方法
+              </h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">button-counter</span> <span class="c-attr-vue c-strong">v-on</span><span class="c-attr-vue c-strong">:incrementBy</span><span class="c-quote">="</span><span class="c-attr-value">incWithVal</span><span class="c-quote">"</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">父组件写法:</h3>
+
+              <pre class="code"><code>methods: <span class="c-braces">{
+</span>  <span class="c-function_name">incWithVal</span>: <span class="c-function">function</span> <span class="c-parentheses">(</span><span class="c-params">toAdd</span><span class="c-parentheses">)</span> <span class="c-braces">{ </span>...<span class="c-braces"> }</span><span class="c-braces">
+}</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">在子组件button-counter内部写：</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-this">this</span>.$emit<span class="c-parentheses">(</span><span class="c-quote">'</span><span class="c-string">incrementBy</span><span class="c-quote">'</span><span class="c-comma">,</span> 5<span class="c-parentheses">)</span></code></pre>
+              <div class="help-box"><div class="help h-custom"></div></div>
+            </div>
+          </div>
+          <div class="module">
+            <h2 class="title"></h2>
+
+            <div class="block ps">
+              <div class="logo-m"></div>
+              <div class="word">
+                <p class="from">原文来自VueMastery出品的PDF</p>
+                <a
+                  class="link"
+                  href="https://www.VueMastery.com"
+                  target="_blank"
+                  >VueMastery.com</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="half">
+          <div class="module">
+            <h2 class="title">生命周期钩子</h2>
+            <div class="icon i-hook"></div>
+            <div class="group">
+              <pre
+                class="code"
+              ><code><span class="c-attr-vue c-strong">beforeCreate</span>   <span class="c-attr-vue c-strong">beforeUpdate</span>
+<span class="c-attr-vue c-strong">created</span>        <span class="c-attr-vue c-strong">updated</span>
+<span class="c-attr-vue c-strong">beforeMount</span>    <span class="c-attr-vue c-strong">beforeDestroy</span>
+<span class="c-attr-vue c-strong">mounted</span>        <span class="c-attr-vue c-strong">destroyed</span></code></pre>
+            </div>
+          </div>
+          <div class="module">
+            <h2 class="title">使用单插槽</h2>
+            <div class="icon i-slot"></div>
+            <div class="group">
+              <h3 class="depict">组件模板</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">div</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-keyword">h2</span><span class="c-tag">&gt;</span>I<span class="c-quote">'</span>m a title<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">h2</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;</span><span class="c-keyword">slot</span><span class="c-tag">&gt;</span>
+      Only displayed if no slot content
+    <span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">slot</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">div</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">组件和插槽一起用</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">my-component</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>This will go<span class="c-vue-in"> in </span><span class="c-var">the</span> slot<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">my-component</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+          </div>
+          <div class="module">
+            <h2 class="title">多个插槽</h2>
+
+            <div class="group">
+              <h3 class="depict">组件写法</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">div</span><span class="c-keyword"> class</span><span class="c-quote">="</span><span class="c-id">container</span><span class="c-quote">"</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-keyword">header</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;</span><span class="c-keyword">slot</span><span class="c-keyword"> name</span><span class="c-quote">="</span><span class="c-id">header</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">slot</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">header</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-keyword">main</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;</span><span class="c-keyword">slot</span><span class="c-tag">&gt;</span>Default content<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">slot</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">main</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-keyword">footer</span><span class="c-tag">&gt;</span>
+    <span class="c-tag">&lt;</span><span class="c-keyword">slot</span><span class="c-keyword"> name</span><span class="c-quote">="</span><span class="c-id">footer</span><span class="c-quote">"</span><span class="c-tag">&gt;</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">slot</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">footer</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">div</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+            <div class="group">
+              <h3 class="depict">带插槽的组件用法:</h3>
+
+              <pre
+                class="code"
+              ><code><span class="c-tag">&lt;</span><span class="c-keyword">app-layout</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-keyword">h1</span><span class="c-keyword"> slot</span><span class="c-quote">="</span><span class="c-id">header</span><span class="c-quote">"</span><span class="c-tag">&gt;</span>Page title<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">h1</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>the main content<span class="c-dot">.</span><span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>
+  <span class="c-tag">&lt;</span><span class="c-keyword">p</span><span class="c-keyword"> slot</span><span class="c-quote">="</span><span class="c-id">footer</span><span class="c-quote">"</span><span class="c-tag">&gt;</span>Contact info<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">p</span><span class="c-tag">&gt;</span>
+<span class="c-tag">&lt;</span><span class="c-tag">/</span><span class="c-keyword">app-layout</span><span class="c-tag">&gt;</span></code></pre>
+            </div>
+          </div>
+          <div class="module">
+            <h2 class="title">你应该知道的知识</h2>
+
+            <div class="group">
+              <pre
+                class="code"
+              ><code><span class="c-library c-strong">Vue CLI</span>
+<span class="c-chinese">命令行工具，用于快速的Vue开发。</span>        
+<span class="c-library c-strong">Vue Router</span>
+<span class="c-chinese">单页应用的路由管理器。</span>
+<span class="c-library c-strong">Vue DevTools</span>
+<span class="c-chinese">用于调试Vue应用程序的浏览器扩展。</span>
+<span class="c-library c-strong">Nuxt.js</span>
+<span class="c-chinese">用于服务器端渲染、代码拆分、热加载、静态生成等的库。</span></code></pre>
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="https://share.weiyun.com/FoBkyN1v" target="_blank"><div class="download">我要打印</div></a>
+      <a href="https://share.weiyun.com/FoBkyN1v" target="_blank"
+        ><div class="download">我要打印</div></a
+      >
     </div>
-    <script src="js/data.js"></script>
-    <script src="js/index.js"></script>
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?3f5accb7834ffe8cb0624fb042fa9282";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>      
   </body>
 </html>
